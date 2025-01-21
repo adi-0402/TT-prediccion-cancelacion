@@ -1,22 +1,55 @@
-# Predicción de Cancelación de Clientes
-![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey)
-![Estado](https://img.shields.io/badge/Estado-Terminado-brightgreen)
+---
 
-## 📖 Descripción del Proyecto
-Este proyecto tiene como objetivo desarrollar un modelo de machine learning para predecir la cancelación de clientes de un operador de telecomunicaciones. La empresa busca identificar a los clientes en riesgo de cancelar sus servicios para ofrecerles promociones y planes especiales, mejorando la retención. Este proyecto se realizo con Tripleten.
+# Predicción de Cancelación de Clientes en Interconnect
+
+---
+
+## 🔖 Descripción del Proyecto
+Este proyecto desarrolla un modelo predictivo para identificar clientes de Interconnect, un operador de telecomunicaciones, que están en riesgo de cancelar sus servicios. Utilizando datos sobre contratos, uso de servicios y características personales, se busca optimizar las estrategias de retención al ofrecer incentivos personalizados. Este proyecto se realizo con TripleTen.
+
+---
 
 ## 💻 Funcionalidades
-- `Limpieza y Preprocesamiento de Datos`: Transformación de datos personales, contratos y uso de servicios para su uso en modelos de clasificación.
-- `Entrenamiento de Modelos`: Evaluación de múltiples modelos de machine learning para predecir la cancelación de clientes.
-- `Evaluación de Rendimiento`: Comparación de modelos utilizando métricas como Accuracy, Precision, Recall, F1-Score, y AUC-ROC.
+- **Preprocesamiento de Datos**: Limpieza y combinación de múltiples conjuntos de datos, manejo de valores nulos y codificación de variables categóricas.
+- **Análisis Exploratorio de Datos (EDA)**: Visualizaciones como histogramas y boxplots para identificar patrones en el comportamiento de los clientes.
+- **Ingeniería de Características**: Creación de nuevas variables como "duración del contrato" y "cargos totales por mes".
+- **Selección de Características**: Uso de Boruta y SHAP para identificar las variables más relevantes.
+- **Modelado Predictivo**: Implementación de varios modelos de Machine Learning, incluyendo:
+  - Logistic Regression
+  - Decision Tree Classification
+  - Random Forest Classifier
+  - XGBoost
+  - K-Nearest Neighbors (KNN)
+- **Evaluación del Modelo**: Análisis basado en métricas como AUC-ROC, F1-score, precisión y recall.
 
-## 🛠 Tecnologías Utilizadas
+---
+
+## 🛠️ Tecnologías Utilizadas
 - Python
-- Pandas
-- Scikit-learn
+- Pandas 
+- NumPy 
+- Scikit-learn 
 - XGBoost
+- Matplotlib
+- Seaborn
+- Boruta
+- SHAP
+
+---
+
+## 🔢 Resultados
+- **Mejor Modelo**: XGBoost
+  - Valores destacados: F1-score de **0.84** y AUC-ROC de **0.95** en el conjunto de prueba.
+- Otros modelos, como Logistic Regression y Decision Tree Classification, también mostraron desempeños competitivos, aunque inferiores a XGBoost.
+
+---
 
 ## ✨ Conclusiones
-- `Mejor modelo`: XGBoost destacó con los mejores resultados en métricas clave como **F1-Score (0.856)** y **AUC-ROC (0.966)**, demostrando su eficacia para predecir la cancelación de clientes.
-- `Segmentación efectiva de clientes`: El análisis de los datos personales, contratos y servicios contratados permitirá a Interconnect segmentar a los clientes según sus características y comportamientos, facilitando intervenciones más personalizadas y efectivas para mejorar la retención.
-- `Impacto de los servicios adicionales`: Se identificó que los servicios adicionales, como el soporte técnico y el almacenamiento en la nube, están asociados con una menor tasa de cancelación, lo que sugiere que los clientes que utilizan estos servicios podrían estar más satisfechos y menos propensos a cancelar.
+- **Impacto del Proyecto**: 
+  Este modelo predictivo permite identificar clientes en riesgo de cancelación, ayudando a Interconnect a implementar estrategias de retención proactivas como ofertas personalizadas y beneficios adicionales.
+- **Segmentación de Clientes**: 
+  La combinación de datos contractuales, personales y de uso permite segmentar a los clientes en grupos específicos, optimizando las acciones de retención.
+- **Uso de Servicios Adicionales**: 
+  Los clientes que utilizan servicios adicionales, como soporte técnico y almacenamiento en la nube, tienen una menor probabilidad de cancelación, lo que podría guiar futuras iniciativas de marketing.
+
+---
